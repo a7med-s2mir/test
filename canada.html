@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kexperts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="./image/Knowledge Experts - Logo-02 (1).png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+       body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+      text-align: justify;
+    }
+    .navbar{
+        width: 100%;
+        height: 80px;
+        background: #004723 ;
+    }
+    .navbar .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .icon i{
+        font-size: 35px;
+        color: white;
+        margin-left: 20px;
+    }
+    .logo{
+        display: flex;
+    }
+    .logo h1{
+        color: white;
+        margin-top: 6px;
+    }
+    .logo img{
+        margin-top: -8px;
+        margin-left: 10px;
+
+    }
+  
+    .navbars {
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-weight: bold;
+    }
+    .navbars a {
+      text-decoration: none;
+      color: #333;
+    }
+    .navbars a.active {
+      color: orange;
+      border-bottom: 2px solid orange;
+    }
+    .hove:hover{
+      border-bottom: 2px solid orange;
+    }
+    .containers {
+      display: flex;
+      flex-direction: row;
+      padding: 40px;
+      gap: 40px;
+      width: 90%;
+    }
+    .map {
+      flex: 1;
+    }
+    .map iframe {
+      width: 100%;
+      height: 450px;
+      border: 0;
+    }
+    .content {
+      flex: 2;
+    }
+    h1 {
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .flag {
+      width: 35px;
+    }
+    h2 {
+      color: orange;
+      margin-top: 30px;
+    }
+    p {
+      line-height: 1.8;
+      margin: 10px 0;
+    }
+    .requirements {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .requirements img {
+        max-width: 400px;
+        border-radius: 1rem;
+        margin-top: 7px;
+        margin-left: 20px;
+    }
+    ul {
+      padding-right: 1.5rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    ol {
+      padding-right: 1.5rem;
+    }
+    ol li {
+      margin-bottom: 0.5rem;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #000000bd;
+      margin: 2rem auto;
+      width: 80%;
+    }
+    .texts{
+      width: 50%;
+    }
+    .my-button {
+        width: 15%;
+        padding: 12px 0;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        display: block;
+        margin: 40px auto;
+        text-align: center;
+    }
+    .my-button:hover{
+        background-color: #14613a;
+        color: white;
+    }
+    .footer {
+    padding: 20px;
+    background-color: #14613a;
+    color: #fff;
+    margin-top: 30px;
+    }
+    .footer a {
+        color: #fff;
+    }
+    .foot-body ul .con{
+        display: flex;
+        margin-top: 30px;
+    }
+    .foot-body ul .con i{
+        margin-left: 20px;
+
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: #373a3c;
+    }
+    .title{
+        margin-right: 36px;
+    }
+    .fot{
+        margin-top: 15px;
+    }
+    .copyright {
+        background-color: #004723;
+        padding: 10px;
+        text-align: center;
+    }
+    @media (max-width: 992px) {
+  .containers {
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .requirements {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .requirements img {
+    max-width: 100%;
+    margin: 20px 0 0;
+  }
+
+  .my-button {
+    width: 80%;
+  }
+
+  .navbars {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  .texts{
+      width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+  .navbar .logo h1 {
+    font-size: 20px;
+  }
+
+  .navbar .icon a {
+    font-size: 18px;
+ }
+
+  .flag {
+    width: 25px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p, ul li {
+    font-size: 14px;
+  }
+
+  .my-button {
+    font-size: 16px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+    <div class="navbar" style="background-color: #004723;">
+        <div class="nav">
+            <div class="logo">
+                <img src="./image/Knowledge Experts - Logo-02 (1).png" alt="" width="50px" height="70px">
+                <h1>شركة خبراء المعرفة</h1>
+            </div>
+            <div class="icon">
+                <a href="https://www.instagram.com/k_expertsco1/?igshid///=/%20/%20/%20ner7sx42ge1i" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/k_expertsco1?s///=/%20/%20/%2011" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    
+                 <a href="tel:966148404405+"><i class="fa-solid fa-mobile-screen-button"></i></a>   
+                    <a href="mailto:info@kexperts.sa"> <i class="fa-regular fa-envelope"></i></a>
+            </div>  
+        </div>
+    </div>
+
+
+  <div class="navbars">
+    <a href="./America.html" class="hove">الولايات المتحدة الأمريكية</a>
+    <a href="./canada.html" class="active">كندا </a>
+    <a href="./uk.html" class="hove">بريطانيا </a>
+    <a href="./egypt.html" class="hove">مصر</a>
+    <a href="./Jordan.html" class="hove">الأردن </a>
+    <a href="./Türkiye.html" class="hove">تركيا </a>
+    <a href="./Malaysia.html" class="hove">ماليزيا</a>
+  </div>
+
+  <div class="containers">
+    
+    <div class="content">
+        <h1><img src="./image/canada-flag.png" alt="علم كندا" class="flag">كندا</h1>
+
+        <h2>الدراسة في كندا </h2>
+        <p>تعد الدراسة في كندا في أوج نجاحها، وذلك لما لها من ريادة في مجالات الأعمال، والتكنولوجيا، والفنون، والثقافة. وهذا مما يجعلها تتمتع بأفضل أنظمة التعليم ، حيث أنه يتم تصنيف معظم الجامعات الكندية باستمرار ضمن أفضل الجامعات في العالم لسنوات عديدة. تحتوي كندا على الكثير من الجامعات المعترف بها عالمياً بسبب المقررات الدراسية القوية ، مقارنة بالعديد من الدول الأخرى بالإضافة إلى العديد من البرامج والمستويات التي توفرها كثير من معاهد تعليم اللغة الانجليزية هناك والتي تناسب الجميع. مما يميز كندا أن لديها العديد من البرامج المصممة خصيصًا لتشجيع ودعم الطلاب مثل العمل أﺛﻨﺎء اﻟﺪراﺳﺔ و اﻟﺮﻋﺎﻳﺔ اﻟﺼﺤﻴﺔ اﻟﻤﺠﺎﻧﻴﺔ. وقد صنفت العديد من الدراسات بأن كندا من الدول الاكثر امانا وسلامة للعيش فيها. حيث تعد السلامة الشخصية من أهم مقومات الدراسة في الخارج وخاصة عند العيش بمفردك بعيدًا عن عائلتك وأصدقائك. كما ان لدى كندا سياسية عامة متعلقة بتعدد الثقافات وتحرص على حماية واحترام عادات وتقاليد</p>
+
+        <h2>نظام التعليم في كندا</h2>
+        <p>
+            هناك أنواع مختلفة من المؤهلات التي تقدمها الجهات التعليمية في كندا وهيا :
+
+            الجامعة:
+            يمكن للطلاب التقدم للحصول على درجة البكالوريوس وشهادة الدراسات العليا والدبلوم والدرجات المهنية والدكتوراه في جامعات كندا.
+            كليات الجامعة:
+            تشمل البرامج التي تقدمها كليات الجامعة برامج الدبلوم والتحويل الجامعي.
+            كليات المجتمع:
+            يمكن للطلاب الحصول على شهادة الدبلوم ودرجة الزمالة والدرجة الجامعية ودبلوم الدراسات العليا في كليات المجتمع.
+            الكليات المهنية والتقنية:
+            شهادة الدبلوم العالي للتعليم الفني.
+
+        </p>
+
+        <h2>السنة الأكاديمية في كندا</h2>
+        <p>
+            إذا كنت ترغب في التقديم للدراسة في كندا ، يجب أن تعرف أن الكليات والجامعات الكندية تقدم فصلين دراسيين.
+            برامج البكالوريس والماجستير	 , برامج الدبلوم في الكليات
+
+        </p>
+
+        <h2> تكلفة المعيشة في كندا </h2>
+        <p>
+            تختلف نفقات المعيشة بين المحافظات والمدن. التكاليف أيضًا منخفضة نسبيًا في ضواحي المدن ، وتتراوح تكلفة المعيشة عادةً بين 900 إلى 1200 دولار كندي شهريًا ، بما في ذلك المصاريف اليومية للطعام والمواصلات والنفقات الشخصية ، وقد تختلف بين الإقامة في الجامعة أو المعهد ، أو مسكن مع عائلة.
+        </p>
+
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31556009.7342824!2d-124.84897449999999!3d37.2691743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z2KfZhNmF2KfZhg!5e0!3m2!1sar!2seg!4v1610000000000!5m2!1sar!2seg" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+  </div>
+
+  <hr />
+
+  <div class="requirements">
+    
+
+    <div class="texts">
+      <h2>متطلبات تأشيرة الطالب في كندا</h2>
+      <ol>
+        <li>جواز سفر ساري المفعول لمدة 6 أشهر على الأقل</li>
+        <li>خطاب عرض القبول (LOA)</li>
+        <li>كشف حساب بنكي لمدة 6 أشهر باللغة الإنجليزية وخطاب تعهد مالي من الكفيل لتغطية تكاليف الدراسة والمعيشة (إن وجدت) أو ضمان مالي من الحكومة (الطالب الراعي)</li>
+        <li>وثائق التأهيل الأكاديمي مثل كشف الدرجات و IELTS</li>
+        <li>رسالة الغرض من الدراسة.</li>
+        <li>صورة شخصية ، خلفية بيضاء. (رقمي)</li>
+        <li>شهادة الميلاد مترجمة للغة الإنجليزية</li>
+      </ol>
+      <ul>
+        <li style="color: red;">* قد تكون هناك متطلبات إضافية أخرى ، لذا يرجى الاتصال بمستشار IDE للحصول على قائمة مفصلة بالوثائق المطلوبة</li>
+      </ul>
+    </div>
+    <img src="./image/visa-img-destination.jpg" alt="Student Visa" >
+  </div>
+
+  <a href="#" class="my-button">التالي</a>
+
+  <footer >
+    <div class="footer">
+      <div class="row">
+        <div class="foot contact col-md-6 col-lg-3 ">
+          <h3 class="title">معلومات الاتصال</h3>
+          <div class="foot-body">
+            <ul>
+              <li class="con">
+                <span><i class="fa fa-map-marker"></i></span>
+                <div class="text">7548  شارع حزام ابن عوف  2627  حي وادي مذينب  42364  المدينة المنورة  المملكة العربية السعودية https://goo.gl/j9K21F</div>
+              </li>
+              <li  class="con">
+                <span><i class="fa fa-phone"></i></span>
+                <div class="text">966148404405+</div>
+              </li>
+              <li class="con">
+                <span><i class="fa fa-envelope"></i></span>
+                <div class="text"><a href="mailto:info@kexperts.sa" class="__cf_email__" data-cfemail="aec7c0c8c1eec5cbd6decbdcdadd80ddcf">info@kexperts.sa
+                </a></div>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="foot news col-md-6 col-lg-3 ">
+          <h3 class="title">أخر المقالات</h3>
+          <div class="foot-body">
+            <ul>
+                          <li>
+                <span><img src="template/frontend/images/logo.png" alt=""></span>
+                <div class="text">
+                  <div class="des">شركة خبراء المعرفة ترحب بكم في موقعها الرسمي</div>
+                  <a href="https://kexperts.sa/details.php?module=artical&id=28">معرفة المزيد</a>
+                </div>
+              </li>
+              <li>
+                <span><img src="template/frontend/images/logo.png" alt=""></span>
+                <div class="text">
+                  <div class="des">شركة خبراء المعرفة</div>
+                  <a href="https://kexperts.sa/details.php?module=artical&id=27">معرفة المزيد</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot news col-md-6 col-lg-3 ">
+          <h3 class="title">صفحات أخرى</h3>
+          <div class="foot-body" >
+          <ul>
+            <li class="fot"><a href="https://kexperts.sa/index.php">الرئيسية</a></li>
+            <li class="fot"><a href="https://kexperts.sa/details.php?module=topic&id=57">من نحن</i></a></li>
+            <li class="fot"><a href="https://kexperts.sa/details.php?module=topic&id=61">معلومات تهم عملائنا</a></li>
+            <li class="fot"><a href="https://kexperts.sa/cat.php?module=files">برامجنا</a> </li>
+            <li class="fot"><a href="https://kexperts.sa/cat.php?module=artical"> </i>المدونة</a></li>
+            <li class="fot"><a href="https://kexperts.sa/faq.php">الأسئلة الشائعة</a></li>
+            <li class="fot"><a href="https://kexperts.sa/contact.php">تواصل معنا</a></li>
+           </ul>
+           </div>
+        </div>
+        <div class="foot news col-md-6 col-lg-3 ">
+          <h3 class="title">تابعنا على تويتر</h3>
+          <div class="foot-body" >
+            <ul>
+              <li>
+                <a class="twitter-timeline" data-height="100" data-width="250" data-link-color="#2B7BB9" href="https://twitter.com/k_expertsco1?s=21">Tweets by Knwoledge Experts</a>
+                <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="../platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </li>
+            </ul>
+           </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 site">
+            <p class="font"><img src="./image/mada.jpg"/></p>
+            <p class="font" style="color: #fff;">جميع الحقوق محفوظة © 2010 لـ شركة خبراء المعرفة</p>
+      </div>
+      </div>
+    </div>
+  </div> 
+</body>
+</html>
